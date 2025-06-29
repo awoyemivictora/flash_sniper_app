@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background Colors */
+    --bg-primary: #0c1322;
+    --bg-secondary: #0f172a;
+    --bg-overlay: #0f172ab2;
+    --bg-success: #10b981;
+    --bg-dark-1: #111a30;
+    --bg-dark-2: #111b31;
+    --bg-accent: #1a294b;
+    --bg-warning-light: #e7a13a19;
+    --bg-error-light: #ffe5e5;
+    --bg-white: #ffffff;
+
+    /* Text Colors */
+    --text-success: #10b981;
+    --text-primary: #3773ec;
+    --text-muted: #9e9da3;
+    --text-secondary: #b9b9b9;
+    --text-warning: #e7a13a;
+    --text-light: #ebebef;
+    --text-white: #ffffff;
+    --text-white-transparent: #ffffff7f;
+  }
+}
+
+@layer utilities {
+  /* Background Colors */
+  .bg-primary {
+    background-color: var(--bg-primary);
+  }
+  .bg-secondary {
+    background-color: var(--bg-secondary);
+  }
+  .bg-overlay {
+    background-color: var(--bg-overlay);
+  }
+  .bg-success {
+    background-color: var(--bg-success);
+  }
+  .bg-dark-1 {
+    background-color: var(--bg-dark-1);
+  }
+  .bg-dark-2 {
+    background-color: var(--bg-dark-2);
+  }
+  .bg-accent {
+    background-color: var(--bg-accent);
+  }
+  .bg-warning-light {
+    background-color: var(--bg-warning-light);
+  }
+  .bg-error-light {
+    background-color: var(--bg-error-light);
+  }
+  .bg-white {
+    background-color: var(--bg-white);
+  }
+
+  /* Text Colors */
+  .text-success {
+    color: var(--text-success);
+  }
+  .text-primary {
+    color: var(--text-primary);
+  }
+  .text-muted {
+    color: var(--text-muted);
+  }
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+  .text-warning {
+    color: var(--text-warning);
+  }
+  .text-light {
+    color: var(--text-light);
+  }
+  .text-white {
+    color: var(--text-white);
+  }
+  .text-white-transparent {
+    color: var(--text-white-transparent);
+  }
+}

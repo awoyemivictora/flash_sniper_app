@@ -1,0 +1,92 @@
+// {
+//   "compilerOptions": {
+//     "target": "ES2020",
+//     "useDefineForClassFields": true,
+//     "lib": [
+//       "ES2020",
+//       "DOM",
+//       "DOM.Iterable"
+//     ],
+//     "module": "ESNext",
+//     "skipLibCheck": true,
+//     "moduleResolution": "bundler",
+//     "allowImportingTsExtensions": true,
+//     "resolveJsonModule": true,
+//     "noEmit": true,
+//     "jsx": "react-jsx",
+//     "strict": true,
+//     "noFallthroughCasesInSwitch": true,
+//     "esModuleInterop": true,
+//     "baseUrl": "./src",
+//     "paths": {
+//       "@/*": [
+//         "src/*"
+//       ]
+//     }
+//   },
+//   "include": [
+//     "src"
+//   ],
+//   "references": [
+//     {
+//       "path": "./tsconfig.node.json"
+//     }
+//   ]
+// }
+
+
+
+
+
+
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    // Add this line to allow TypeScript to import JavaScript files
+    "allowJs": true,
+    // You might want to consider "checkJs": true if you want TypeScript
+    // to also perform some basic type checking on your JS files.
+    // However, it can sometimes introduce new errors initially.
+    // For now, leaving it out (or false) is fine if you just want to get imports working.
+    // "checkJs": false,
+
+    "baseUrl": "./src", // This is good for resolving paths relative to src
+    "paths": {
+      // This alias is for importing modules starting with @/, e.g., @/utils/wallet
+      "@/*": [
+        "*" // This means "@/module" resolves to "src/module" because baseUrl is "src"
+      ]
+      // You can add more specific aliases if needed, like:
+      // "@components/*": ["components/*"],
+      // "@pages/*": ["pages/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    // <--- **Crucial: Include JavaScript files in your project scope**
+    "src/**/*.js",
+    "src/**/*.jsx"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}
